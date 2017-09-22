@@ -1,26 +1,32 @@
 # AngularJS con NodeJS y MongoDB sin Generator
-
 ## Instalacion
 
 ```
-composer install
 npm install
 ```
-
-Modificar el fichero .env y borrar la clave de aplicacion y crear una nueva
-Modificar ademas la informacion de la base de datos
-```
-php artisan key:generate
-```
-
-## Compilar el proyecto de Angular cada vez que se modifique
+## Crear fichero de variable .env y colocar adentro las llaves de acceso
 
 ```
-ng build
+SENDGRID_KEY=sendgridKey
+MASTER_KEY=masterKey
+JWT_SECRET=jwtSecret
+```
+## Iniciar servicio de MongoDB
+```
+sudo service mongod start
 ```
 
 ## Servir la aplicacion
 
 ```
-php artisan serve
+npm run dev
 ```
+
+
+## Ir a la pagina
+
+```
+localhost:9000
+```
+Esta aplicacion fue construida con api generator, para montar el servidor en un hosting de heroku y pasarlo a produccion ir al link
+https://github.com/AlbertoIHP/rest
